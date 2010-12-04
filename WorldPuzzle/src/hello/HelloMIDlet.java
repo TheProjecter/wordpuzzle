@@ -141,7 +141,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     public StringItem getStringItem() {
         if (stringItem == null) {//GEN-END:|16-getter|0|16-preInit
             // write pre-init user code here
-            stringItem = new StringItem("Hello", "Hello, World!");//GEN-LINE:|16-getter|1|16-postInit
+            stringItem = new StringItem("Hello", "Hello, World! X-i\'ll is now in!");//GEN-LINE:|16-getter|1|16-postInit
             // write post-init user code here
         }//GEN-BEGIN:|16-getter|2|
         return stringItem;
