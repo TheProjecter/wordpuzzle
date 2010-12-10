@@ -19,6 +19,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private Command exitCommand;
     private Form form;
     private StringItem stringItem;
+    private StringItem stringItem1;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -124,7 +125,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     public Form getForm() {
         if (form == null) {//GEN-END:|14-getter|0|14-preInit
             // write pre-init user code here
-            form = new Form("Welcome", new Item[] { getStringItem() });//GEN-BEGIN:|14-getter|1|14-postInit
+            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1() });//GEN-BEGIN:|14-getter|1|14-postInit
             form.addCommand(getExitCommand());
             form.setCommandListener(this);//GEN-END:|14-getter|1|14-postInit
             // write post-init user code here
@@ -147,6 +148,21 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
         return stringItem;
     }
     //</editor-fold>//GEN-END:|16-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: stringItem1 ">//GEN-BEGIN:|22-getter|0|22-preInit
+    /**
+     * Returns an initiliazed instance of stringItem1 component.
+     * @return the initialized component instance
+     */
+    public StringItem getStringItem1() {
+        if (stringItem1 == null) {//GEN-END:|22-getter|0|22-preInit
+            // write pre-init user code here
+            stringItem1 = new StringItem("hello", "stacy");//GEN-LINE:|22-getter|1|22-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|22-getter|2|
+        return stringItem1;
+    }
+    //</editor-fold>//GEN-END:|22-getter|2|
 
     /**
      * Returns a display instance.
