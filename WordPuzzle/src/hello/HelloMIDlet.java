@@ -20,7 +20,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private Form form;
     private StringItem stringItem;
     private StringItem stringItem1;
-    private TextField textField;
+    private StringItem stringItem2;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -126,7 +126,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     public Form getForm() {
         if (form == null) {//GEN-END:|14-getter|0|14-preInit
             // write pre-init user code here
-            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1(), getTextField() });//GEN-BEGIN:|14-getter|1|14-postInit
+            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1(), getStringItem2() });//GEN-BEGIN:|14-getter|1|14-postInit
             form.addCommand(getExitCommand());
             form.setCommandListener(this);//GEN-END:|14-getter|1|14-postInit
             // write post-init user code here
@@ -165,20 +165,22 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     }
     //</editor-fold>//GEN-END:|22-getter|2|
 
-    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: textField ">//GEN-BEGIN:|23-getter|0|23-preInit
+
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: stringItem2 ">//GEN-BEGIN:|24-getter|0|24-preInit
     /**
-     * Returns an initiliazed instance of textField component.
+     * Returns an initiliazed instance of stringItem2 component.
      * @return the initialized component instance
      */
-    public TextField getTextField() {
-        if (textField == null) {//GEN-END:|23-getter|0|23-preInit
+    public StringItem getStringItem2() {
+        if (stringItem2 == null) {//GEN-END:|24-getter|0|24-preInit
             // write pre-init user code here
-            textField = new TextField("hello", "X-i\'ll", 32, TextField.ANY);//GEN-LINE:|23-getter|1|23-postInit
+            stringItem2 = new StringItem("hello", "X-i\'ll");//GEN-LINE:|24-getter|1|24-postInit
             // write post-init user code here
-        }//GEN-BEGIN:|23-getter|2|
-        return textField;
+        }//GEN-BEGIN:|24-getter|2|
+        return stringItem2;
     }
-    //</editor-fold>//GEN-END:|23-getter|2|
+    //</editor-fold>//GEN-END:|24-getter|2|
 
     /**
      * Returns a display instance.
