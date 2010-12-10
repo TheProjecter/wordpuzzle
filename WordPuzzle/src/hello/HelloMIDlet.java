@@ -20,6 +20,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private Form form;
     private StringItem stringItem;
     private StringItem stringItem1;
+    private TextField textField;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -125,7 +126,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     public Form getForm() {
         if (form == null) {//GEN-END:|14-getter|0|14-preInit
             // write pre-init user code here
-            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1() });//GEN-BEGIN:|14-getter|1|14-postInit
+            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1(), getTextField() });//GEN-BEGIN:|14-getter|1|14-postInit
             form.addCommand(getExitCommand());
             form.setCommandListener(this);//GEN-END:|14-getter|1|14-postInit
             // write post-init user code here
@@ -163,6 +164,21 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
         return stringItem1;
     }
     //</editor-fold>//GEN-END:|22-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: textField ">//GEN-BEGIN:|23-getter|0|23-preInit
+    /**
+     * Returns an initiliazed instance of textField component.
+     * @return the initialized component instance
+     */
+    public TextField getTextField() {
+        if (textField == null) {//GEN-END:|23-getter|0|23-preInit
+            // write pre-init user code here
+            textField = new TextField("hello", "X-i\'ll", 32, TextField.ANY);//GEN-LINE:|23-getter|1|23-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|23-getter|2|
+        return textField;
+    }
+    //</editor-fold>//GEN-END:|23-getter|2|
 
     /**
      * Returns a display instance.
