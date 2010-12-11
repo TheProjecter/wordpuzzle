@@ -30,13 +30,13 @@
                     <Property name="commands" typeID="1C#CommandEventSource" value="A1:3_R18"/>
                     <Property name="title" typeID="Pjava.lang.String" value="Vform"/>
                     <Property name="commandListener" typeID="C#CommandListener" value="R7"/>
-                    <Property name="items" typeID="1Cjavax.microedition.lcdui.Item" value="A1:3_R15"/>
+                    <Property name="items" typeID="1Cjavax.microedition.lcdui.Item" value="A2:3_R153_R20"/>
                     <Component componentID="15" typeID="Cjavax.microedition.lcdui.TextField">
                         <Property name="instanceName" typeID="Pjava.lang.String" value="VtextField"/>
                         <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
-                        <Property name="label" typeID="Pjava.lang.String" value="Vhello"/>
+                        <Property name="label" typeID="Pjava.lang.String" value="VWordPuzzle Project"/>
                         <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R8"/>
-                        <Property name="text" typeID="Pjava.lang.String" value="VHello again and again"/>
+                        <Property name="text" typeID="Pjava.lang.String" value="VHello from developers"/>
                         <Property name="maxSize" typeID="Pint" value="V32"/>
                         <Property name="constraints" typeID="Pint" value="V0"/>
                     </Component>
@@ -49,6 +49,38 @@
                             <Property name="mobileDevice" typeID="C#MobileDevice" value="R2"/>
                         </Component>
                     </Component>
+                    <Component componentID="20" typeID="Cjavax.microedition.lcdui.ChoiceGroup">
+                        <Property name="instanceName" typeID="Pjava.lang.String" value="VchoiceGroup"/>
+                        <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
+                        <Property name="label" typeID="Pjava.lang.String" value="VWhat do you prefer to do?"/>
+                        <Property name="commands" typeID="1C#ItemCommandEventSource" value="A1:3_R24"/>
+                        <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R8"/>
+                        <Property name="choiceType" typeID="Pint" value="V1"/>
+                        <Property name="elements" typeID="1C#ChoiceElement" value="A2:3_R213_R22"/>
+                        <Component componentID="21" typeID="C#ChoiceElement">
+                            <Property name="string" typeID="Pjava.lang.String" value="V Join the existing game"/>
+                        </Component>
+                        <Component componentID="22" typeID="C#ChoiceElement">
+                            <Property name="string" typeID="Pjava.lang.String" value="V Start new game"/>
+                        </Component>
+                        <Component componentID="24" typeID="C#ItemCommandEventSource">
+                            <Property name="eventHandler" typeID="C#EventHandler" value="R31"/>
+                            <Property name="item" typeID="Cjavax.microedition.lcdui.Item" value="R20"/>
+                            <Property name="command" typeID="Cjavax.microedition.lcdui.Command" value="R23"/>
+                            <Component componentID="31" typeID="C#SwitchDisplayableEventHandler">
+                                <Property name="eventSource" typeID="C#EventSource" value="R24"/>
+                                <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R30"/>
+                            </Component>
+                        </Component>
+                    </Component>
+                </Component>
+                <Component componentID="30" typeID="Cjavax.microedition.lcdui.Alert">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="Valert"/>
+                    <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
+                    <Property name="title" typeID="Pjava.lang.String" value="Valert"/>
+                    <Property name="commandListener" typeID="C#CommandListener" value="R7"/>
+                    <Property name="string" typeID="Pjava.lang.String" value="V:-)"/>
+                    <Property name="timeout" typeID="Pint" value="V-2"/>
                 </Component>
             </Component>
             <Component componentID="11" typeID="C#CommandsCategory">
@@ -58,13 +90,26 @@
                     <Property name="label" typeID="Pjava.lang.String" value="VExit"/>
                     <Property name="type" typeID="Pint" value="V7"/>
                 </Component>
+                <Component componentID="23" typeID="Cjavax.microedition.lcdui.Command">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="VokCommand"/>
+                    <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
+                    <Property name="label" typeID="Pjava.lang.String" value="VOk"/>
+                    <Property name="type" typeID="Pint" value="V4"/>
+                </Component>
             </Component>
-            <Component componentID="12" typeID="C#ResourcesCategory"/>
+            <Component componentID="12" typeID="C#ResourcesCategory">
+                <Component componentID="28" typeID="Cjavax.microedition.lcdui.Image">
+                    <Property name="instanceName" typeID="Pjava.lang.String" value="Vimage"/>
+                    <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
+                    <Property name="resourcePath" typeID="Pjava.lang.String" value="V/WP.png"/>
+                </Component>
+            </Component>
             <Component componentID="13" typeID="C#DatabindingCategory"/>
         </Component>
     </Document>
     <FlowScene version="1">
-        <Node componentID="14" descriptorID="componentNode14" x="297" y="140"/>
         <Node componentID="2" descriptorID="componentNode2" x="50" y="50"/>
+        <Node componentID="14" descriptorID="componentNode14" x="297" y="140"/>
+        <Node componentID="30" descriptorID="componentNode30" x="50" y="50"/>
     </FlowScene>
 </VisualDesign>

@@ -11,14 +11,18 @@ import javax.microedition.lcdui.*;
 /**
  * @author dmitriy
  */
-public class GameItSelf extends MIDlet implements CommandListener {
+public class GameItSelf extends MIDlet implements CommandListener, ItemCommandListener {
 
     private boolean midletPaused = false;
 
     //<editor-fold defaultstate="collapsed" desc=" Generated Fields ">//GEN-BEGIN:|fields|0|
     private Form form;
     private TextField textField;
+    private ChoiceGroup choiceGroup;
+    private Alert alert;
     private Command exitCommand;
+    private Command okCommand;
+    private Image image;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -90,7 +94,7 @@ public class GameItSelf extends MIDlet implements CommandListener {
     public Form getForm() {
         if (form == null) {//GEN-END:|14-getter|0|14-preInit
             // write pre-init user code here
-            form = new Form("form", new Item[] { getTextField() });//GEN-BEGIN:|14-getter|1|14-postInit
+            form = new Form("form", new Item[] { getTextField(), getChoiceGroup() });//GEN-BEGIN:|14-getter|1|14-postInit
             form.addCommand(getExitCommand());
             form.setCommandListener(this);//GEN-END:|14-getter|1|14-postInit
             // write post-init user code here
@@ -107,7 +111,7 @@ public class GameItSelf extends MIDlet implements CommandListener {
     public TextField getTextField() {
         if (textField == null) {//GEN-END:|15-getter|0|15-preInit
             // write pre-init user code here
-            textField = new TextField("hello", "Hello again and again", 32, TextField.ANY);//GEN-LINE:|15-getter|1|15-postInit
+            textField = new TextField("WordPuzzle Project", "Hello from developers", 32, TextField.ANY);//GEN-LINE:|15-getter|1|15-postInit
             // write post-init user code here
         }//GEN-BEGIN:|15-getter|2|
         return textField;
@@ -147,6 +151,97 @@ public class GameItSelf extends MIDlet implements CommandListener {
         return exitCommand;
     }
     //</editor-fold>//GEN-END:|17-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: choiceGroup ">//GEN-BEGIN:|20-getter|0|20-preInit
+    /**
+     * Returns an initiliazed instance of choiceGroup component.
+     * @return the initialized component instance
+     */
+    public ChoiceGroup getChoiceGroup() {
+        if (choiceGroup == null) {//GEN-END:|20-getter|0|20-preInit
+            // write pre-init user code here
+            choiceGroup = new ChoiceGroup("What do you prefer to do?", Choice.EXCLUSIVE);//GEN-BEGIN:|20-getter|1|20-postInit
+            choiceGroup.append(" Join the existing game", null);
+            choiceGroup.append(" Start new game", null);
+            choiceGroup.addCommand(getOkCommand());
+            choiceGroup.setItemCommandListener(this);
+            choiceGroup.setSelectedFlags(new boolean[] { false, false });//GEN-END:|20-getter|1|20-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|20-getter|2|
+        return choiceGroup;
+    }
+    //</editor-fold>//GEN-END:|20-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Method: commandAction for Items ">//GEN-BEGIN:|8-itemCommandAction|0|8-preItemCommandAction
+    /**
+     * Called by a system to indicated that a command has been invoked on a particular item.
+     * @param command the Command that was invoked
+     * @param displayable the Item where the command was invoked
+     */
+    public void commandAction(Command command, Item item) {//GEN-END:|8-itemCommandAction|0|8-preItemCommandAction
+        // write pre-action user code here
+        if (item == choiceGroup) {//GEN-BEGIN:|8-itemCommandAction|1|24-preAction
+            if (command == okCommand) {//GEN-END:|8-itemCommandAction|1|24-preAction
+                // write pre-action user code here
+                switchDisplayable(null, getAlert());//GEN-LINE:|8-itemCommandAction|2|24-postAction
+                // write post-action user code here
+            }//GEN-BEGIN:|8-itemCommandAction|3|8-postItemCommandAction
+        }//GEN-END:|8-itemCommandAction|3|8-postItemCommandAction
+        // write post-action user code here
+    }//GEN-BEGIN:|8-itemCommandAction|4|
+    //</editor-fold>//GEN-END:|8-itemCommandAction|4|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: okCommand ">//GEN-BEGIN:|23-getter|0|23-preInit
+    /**
+     * Returns an initiliazed instance of okCommand component.
+     * @return the initialized component instance
+     */
+    public Command getOkCommand() {
+        if (okCommand == null) {//GEN-END:|23-getter|0|23-preInit
+            // write pre-init user code here
+            okCommand = new Command("Ok", Command.OK, 0);//GEN-LINE:|23-getter|1|23-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|23-getter|2|
+        return okCommand;
+    }
+    //</editor-fold>//GEN-END:|23-getter|2|
+
+
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: image ">//GEN-BEGIN:|28-getter|0|28-preInit
+    /**
+     * Returns an initiliazed instance of image component.
+     * @return the initialized component instance
+     */
+    public Image getImage() {
+        if (image == null) {//GEN-END:|28-getter|0|28-preInit
+            // write pre-init user code here
+            try {//GEN-BEGIN:|28-getter|1|28-@java.io.IOException
+                image = Image.createImage("/WP.png");
+            } catch (java.io.IOException e) {//GEN-END:|28-getter|1|28-@java.io.IOException
+                e.printStackTrace();
+            }//GEN-LINE:|28-getter|2|28-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|28-getter|3|
+        return image;
+    }
+    //</editor-fold>//GEN-END:|28-getter|3|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: alert ">//GEN-BEGIN:|30-getter|0|30-preInit
+    /**
+     * Returns an initiliazed instance of alert component.
+     * @return the initialized component instance
+     */
+    public Alert getAlert() {
+        if (alert == null) {//GEN-END:|30-getter|0|30-preInit
+            // write pre-init user code here
+            alert = new Alert("alert", ":-)", null, null);//GEN-BEGIN:|30-getter|1|30-postInit
+            alert.setTimeout(Alert.FOREVER);//GEN-END:|30-getter|1|30-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|30-getter|2|
+        return alert;
+    }
+    //</editor-fold>//GEN-END:|30-getter|2|
 
     /**
      * Returns a display instance.
