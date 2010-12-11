@@ -21,6 +21,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     private StringItem stringItem;
     private StringItem stringItem1;
     private StringItem stringItem2;
+    private StringItem stringItem3;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -126,7 +127,7 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
     public Form getForm() {
         if (form == null) {//GEN-END:|14-getter|0|14-preInit
             // write pre-init user code here
-            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1(), getStringItem2() });//GEN-BEGIN:|14-getter|1|14-postInit
+            form = new Form("Welcome", new Item[] { getStringItem(), getStringItem1(), getStringItem2(), getStringItem3() });//GEN-BEGIN:|14-getter|1|14-postInit
             form.addCommand(getExitCommand());
             form.setCommandListener(this);//GEN-END:|14-getter|1|14-postInit
             // write post-init user code here
@@ -181,6 +182,21 @@ public class HelloMIDlet extends MIDlet implements CommandListener {
         return stringItem2;
     }
     //</editor-fold>//GEN-END:|24-getter|2|
+
+    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: stringItem3 ">//GEN-BEGIN:|25-getter|0|25-preInit
+    /**
+     * Returns an initiliazed instance of stringItem3 component.
+     * @return the initialized component instance
+     */
+    public StringItem getStringItem3() {
+        if (stringItem3 == null) {//GEN-END:|25-getter|0|25-preInit
+            // write pre-init user code here
+            stringItem3 = new StringItem("hello", "ginz");//GEN-LINE:|25-getter|1|25-postInit
+            // write post-init user code here
+        }//GEN-BEGIN:|25-getter|2|
+        return stringItem3;
+    }
+    //</editor-fold>//GEN-END:|25-getter|2|
 
     /**
      * Returns a display instance.
