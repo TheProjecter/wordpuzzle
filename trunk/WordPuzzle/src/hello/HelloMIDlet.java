@@ -9,8 +9,11 @@ import javax.microedition.midlet.*;
 import javax.microedition.lcdui.*;
 
 /**
- * @author X-i'll
+ * @author X-i'll (Kuznetsov Ilya)
+ * @author Stacy Miller
+ * @author ginz (Dmitriy Ginzburg)
  */
+
 public class HelloMIDlet extends MIDlet implements CommandListener {
 
     private boolean midletPaused = false;
