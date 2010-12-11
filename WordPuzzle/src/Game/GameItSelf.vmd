@@ -64,12 +64,13 @@
                             <Property name="string" typeID="Pjava.lang.String" value="V Start new game"/>
                         </Component>
                         <Component componentID="24" typeID="C#ItemCommandEventSource">
-                            <Property name="eventHandler" typeID="C#EventHandler" value="R31"/>
+                            <Property name="eventHandler" typeID="C#EventHandler" value="R32"/>
                             <Property name="item" typeID="Cjavax.microedition.lcdui.Item" value="R20"/>
                             <Property name="command" typeID="Cjavax.microedition.lcdui.Command" value="R23"/>
-                            <Component componentID="31" typeID="C#SwitchDisplayableEventHandler">
+                            <Component componentID="32" typeID="C#SwitchDisplayableEventHandler">
                                 <Property name="eventSource" typeID="C#EventSource" value="R24"/>
-                                <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R30"/>
+                                <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R14"/>
+                                <Property name="alert" typeID="Cjavax.microedition.lcdui.Alert" value="R30"/>
                             </Component>
                         </Component>
                     </Component>
@@ -79,7 +80,7 @@
                     <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
                     <Property name="title" typeID="Pjava.lang.String" value="Valert"/>
                     <Property name="commandListener" typeID="C#CommandListener" value="R7"/>
-                    <Property name="string" typeID="Pjava.lang.String" value="V:-)"/>
+                    <Property name="string" typeID="Pjava.lang.String" value="V:-) You have chosen 1st option"/>
                     <Property name="timeout" typeID="Pint" value="V-2"/>
                 </Component>
             </Component>
@@ -97,19 +98,13 @@
                     <Property name="type" typeID="Pint" value="V4"/>
                 </Component>
             </Component>
-            <Component componentID="12" typeID="C#ResourcesCategory">
-                <Component componentID="28" typeID="Cjavax.microedition.lcdui.Image">
-                    <Property name="instanceName" typeID="Pjava.lang.String" value="Vimage"/>
-                    <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
-                    <Property name="resourcePath" typeID="Pjava.lang.String" value="V/WP.png"/>
-                </Component>
-            </Component>
+            <Component componentID="12" typeID="C#ResourcesCategory"/>
             <Component componentID="13" typeID="C#DatabindingCategory"/>
         </Component>
     </Document>
     <FlowScene version="1">
         <Node componentID="2" descriptorID="componentNode2" x="50" y="50"/>
         <Node componentID="14" descriptorID="componentNode14" x="297" y="140"/>
-        <Node componentID="30" descriptorID="componentNode30" x="50" y="50"/>
+        <Node componentID="30" descriptorID="componentNode30" x="38" y="302"/>
     </FlowScene>
 </VisualDesign>
