@@ -15,6 +15,10 @@ public class GameItSelf extends MIDlet implements CommandListener, ItemCommandLi
 
     private boolean midletPaused = false;
 
+    public void al()
+    {
+
+    }
     //<editor-fold defaultstate="collapsed" desc=" Generated Fields ">//GEN-BEGIN:|fields|0|
     private Form form;
     private TextField textField;
@@ -22,7 +26,6 @@ public class GameItSelf extends MIDlet implements CommandListener, ItemCommandLi
     private Alert alert;
     private Command exitCommand;
     private Command okCommand;
-    private Image image;
     //</editor-fold>//GEN-END:|fields|0|
 
     /**
@@ -183,7 +186,8 @@ public class GameItSelf extends MIDlet implements CommandListener, ItemCommandLi
         if (item == choiceGroup) {//GEN-BEGIN:|8-itemCommandAction|1|24-preAction
             if (command == okCommand) {//GEN-END:|8-itemCommandAction|1|24-preAction
                 // write pre-action user code here
-                switchDisplayable(null, getAlert());//GEN-LINE:|8-itemCommandAction|2|24-postAction
+                getAlert().setString("You have chosen option#"+((getChoiceGroup().getSelectedIndex()==0)?"1":"2"));
+                switchDisplayable(getAlert(), getForm());//GEN-LINE:|8-itemCommandAction|2|24-postAction
                 // write post-action user code here
             }//GEN-BEGIN:|8-itemCommandAction|3|8-postItemCommandAction
         }//GEN-END:|8-itemCommandAction|3|8-postItemCommandAction
@@ -208,24 +212,7 @@ public class GameItSelf extends MIDlet implements CommandListener, ItemCommandLi
 
 
 
-    //<editor-fold defaultstate="collapsed" desc=" Generated Getter: image ">//GEN-BEGIN:|28-getter|0|28-preInit
-    /**
-     * Returns an initiliazed instance of image component.
-     * @return the initialized component instance
-     */
-    public Image getImage() {
-        if (image == null) {//GEN-END:|28-getter|0|28-preInit
-            // write pre-init user code here
-            try {//GEN-BEGIN:|28-getter|1|28-@java.io.IOException
-                image = Image.createImage("/WP.png");
-            } catch (java.io.IOException e) {//GEN-END:|28-getter|1|28-@java.io.IOException
-                e.printStackTrace();
-            }//GEN-LINE:|28-getter|2|28-postInit
-            // write post-init user code here
-        }//GEN-BEGIN:|28-getter|3|
-        return image;
-    }
-    //</editor-fold>//GEN-END:|28-getter|3|
+
 
     //<editor-fold defaultstate="collapsed" desc=" Generated Getter: alert ">//GEN-BEGIN:|30-getter|0|30-preInit
     /**
@@ -235,7 +222,7 @@ public class GameItSelf extends MIDlet implements CommandListener, ItemCommandLi
     public Alert getAlert() {
         if (alert == null) {//GEN-END:|30-getter|0|30-preInit
             // write pre-init user code here
-            alert = new Alert("alert", ":-)", null, null);//GEN-BEGIN:|30-getter|1|30-postInit
+            alert = new Alert("alert", ":-) You have chosen 1st option", null, null);//GEN-BEGIN:|30-getter|1|30-postInit
             alert.setTimeout(Alert.FOREVER);//GEN-END:|30-getter|1|30-postInit
             // write post-init user code here
         }//GEN-BEGIN:|30-getter|2|
